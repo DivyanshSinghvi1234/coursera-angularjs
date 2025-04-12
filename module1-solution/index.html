@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" ng-app="LunchCheck">
+<head>
+  <meta charset="utf-8">
+  <title>Lunch Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .green {
+      color: green;
+      border: 2px solid green;
+    }
+
+    .red {
+      color: red;
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body ng-controller="LunchCheckController">
+  <h2>Lunch Checker</h2>
+
+  <p>List comma separated lunch items</p>
+  <input type="text" ng-model="lunchItems" placeholder="e.g. sandwich, apple, juice" ng-class="inputClass">
+  <button ng-click="checkLunch()">Check If Too Much</button>
+
+  <p class="message" ng-class="messageClass">{{ message }}</p>
+
+  <p><em>Note: Empty items (i.e., ', ,') are not counted.</em></p>
+
+  <!-- AngularJS Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <!-- Your App -->
+  <script src="app.js"></script>
+</body>
+</html>
