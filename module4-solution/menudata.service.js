@@ -12,17 +12,21 @@
         url: "https://coursera-jhu-default-rtdb.firebaseio.com/categories.json"
       }).then(function (response) {
         return response.data;
+      }).catch(function (error) {
+        console.log("Error fetching categories: ", error);
       });
     };
 
     service.getItemsForCategory = function (categoryShortName) {
-      var url = "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/" + categoryShortName + ".json";
       return $http({
         method: "GET",
-        url: url
+        url: "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/" + categoryShortName + ".json"
       }).then(function (response) {
         return response.data;
+      }).catch(function (error) {
+        console.log("Error fetching menu items: ", error);
       });
     };
   }
 })();
+
