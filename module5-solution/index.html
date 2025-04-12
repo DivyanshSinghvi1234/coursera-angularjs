@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="public">
+<head>
+  <meta charset="utf-8">
+  <title>Restaurant App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+
+  <script src="src/public/public.module.js"></script>
+  <script src="src/routes.js"></script>
+  <script src="src/common/menu.service.js"></script>
+  <script src="src/signup/signup.component.js"></script>
+  <script src="src/myinfo/myinfo.component.js"></script>
+</head>
+<body>
+
+  <div>
+    <a ui-sref="signup">Sign Up</a> |
+    <a ui-sref="myinfo">My Info</a>
+  </div>
+
+  <ui-view></ui-view>
+
+</body>
+</html>
