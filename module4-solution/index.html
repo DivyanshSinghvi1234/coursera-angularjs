@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MenuApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.3/angular-ui-router.min.js"></script>
+</head>
+<body>
+    <div ui-view></div> <!-- This is where the views will be injected -->
+
+    <script src="app.module.js"></script>
+    <script src="app.routes.js"></script>
+    <script src="menuData.service.js"></script>
+    <script src="categories.component.js"></script>
+    <script src="items.component.js"></script>
+</body>
+</html>
