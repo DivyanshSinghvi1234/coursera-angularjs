@@ -1,0 +1,13 @@
+<div class="container" ng-controller="SignupController as signupCtrl">
+    <form name="signupForm" ng-submit="signupCtrl.submit()" novalidate>
+      <input type="text" ng-model="signupCtrl.user.firstName" required placeholder="First Name">
+      <input type="text" ng-model="signupCtrl.user.lastName" required placeholder="Last Name">
+      <input type="email" ng-model="signupCtrl.user.email" required placeholder="Email">
+      <input type="tel" ng-model="signupCtrl.user.phone" required placeholder="Phone">
+      <input type="text" ng-model="signupCtrl.user.favMenu" required placeholder="Favorite Dish (e.g., L1)">
+      <button type="submit" ng-disabled="signupForm.$invalid">Submit</button>
+      <p class="error" ng-if="signupCtrl.invalidMenu">No such menu number exists</p>
+      <p class="success" ng-if="signupCtrl.saved">Your information has been saved</p>
+    </form>
+  </div>
+  

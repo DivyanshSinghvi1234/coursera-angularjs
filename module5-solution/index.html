@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" ng-app="public">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant App</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/signup.controller.js"></script>
+  <script src="js/myinfo.controller.js"></script>
+  <script src="js/menu.service.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="#!/signup">Sign Up</a>
+    <a href="#!/myinfo">My Info</a>
+  </nav>
+  <div ng-view></div>
+</body>
+</html>
